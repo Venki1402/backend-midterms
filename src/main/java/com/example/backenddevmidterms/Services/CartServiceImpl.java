@@ -82,7 +82,7 @@ public class CartServiceImpl implements CartService{
         cartDTO.setUserId(cart.getUserId());
         cartDTO.setDate(cart.getDate());
         cartDTO.setProducts(cart.getProducts());
-        CartDTO response = restTemplate.postForObject("https://fakestoreapi.com/carts", cartDTO, CartDTO.class);
+        CartDTO response = restTemplate.postForObject("https://fakestoreapi.com/carts", cart, CartDTO.class);
         return mapToCart(response);
     }
 
